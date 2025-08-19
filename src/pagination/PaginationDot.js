@@ -3,13 +3,13 @@ import { View, Animated, Easing, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './Pagination.style';
 
-export default class PaginationDot extends PureComponent {
-    static stylePropType = PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array,
-        PropTypes.number,
-    ]);
+const stylePropType = PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.number,
+]);
 
+export default class PaginationDot extends PureComponent {
     static propTypes = {
         inactiveOpacity: PropTypes.number.isRequired,
         inactiveScale: PropTypes.number.isRequired,
