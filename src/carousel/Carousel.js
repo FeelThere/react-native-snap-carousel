@@ -25,13 +25,13 @@ const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
 // otherwise it is undefined at init, which messes with custom indexes
 const IS_RTL = I18nManager.isRTL;
 
-export default class Carousel extends Component {
-    static stylePropType = PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array,
-        PropTypes.number,
-    ]);
+const stylePropType = PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.number,
+]);
 
+export default class Carousel extends Component {
     static propTypes = {
         data: PropTypes.array.isRequired,
         renderItem: PropTypes.func.isRequired,
@@ -48,8 +48,8 @@ export default class Carousel extends Component {
         autoplayDelay: PropTypes.number,
         autoplayInterval: PropTypes.number,
         callbackOffsetMargin: PropTypes.number,
-        containerCustomStyle: this.stylePropType,
-        contentContainerCustomStyle: this.stylePropType,
+        containerCustomStyle: stylePropType,
+        contentContainerCustomStyle: stylePropType,
         enableMomentum: PropTypes.bool,
         enableSnap: PropTypes.bool,
         firstItem: PropTypes.number,
@@ -66,7 +66,7 @@ export default class Carousel extends Component {
         scrollEnabled: PropTypes.bool,
         scrollInterpolator: PropTypes.func,
         slideInterpolatedStyle: PropTypes.func,
-        slideStyle: this.stylePropType,
+        slideStyle: stylePropType,
         shouldOptimizeUpdates: PropTypes.bool,
         swipeThreshold: PropTypes.number,
         useScrollView: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
