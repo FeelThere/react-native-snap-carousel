@@ -7,13 +7,13 @@ import styles from './Pagination.style';
 const IS_IOS = Platform.OS === 'ios';
 const IS_RTL = I18nManager.isRTL;
 
-export default class Pagination extends PureComponent {
-    static stylePropType = PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array,
-        PropTypes.number,
-    ]);
+const stylePropType = PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.number,
+]);
 
+export default class Pagination extends PureComponent {
     static propTypes = {
         activeDotIndex: PropTypes.number.isRequired,
         dotsLength: PropTypes.number.isRequired,
