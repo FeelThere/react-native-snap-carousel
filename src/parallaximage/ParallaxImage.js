@@ -5,13 +5,13 @@ import { View, Image, Animated, Easing, ActivityIndicator, findNodeHandle } from
 import PropTypes from 'prop-types';
 import styles from './ParallaxImage.style';
 
-export default class ParallaxImage extends Component {
-    static stylePropType = PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array,
-        PropTypes.number,
-    ]);
+const stylePropType = PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.number,
+]);
 
+export default class ParallaxImage extends Component {
     static propTypes = {
         ...Image.propTypes,
         carouselRef: PropTypes.object, // passed from <Carousel />
